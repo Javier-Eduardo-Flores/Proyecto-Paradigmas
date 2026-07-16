@@ -34,7 +34,7 @@ profesor('Erika Yaneth Benítez Osorio','0301199804125','erika.benitez@unah.edu.
 
 
 /*
-Requisitos (codigoClase,Nombre de la asignatura,UV)
+asignatura (codigoClase,Nombre de la asignatura,UV)
 */
 
 asignatura('ISC-101','Introduccion a la Ingenieria en Sistemas Computacionales',4).
@@ -42,6 +42,7 @@ asignatura('ISC-102','Programacion Estructura',4).
 asignatura('ISC-103','Programacion Orientada a Objetos',4).
 asignatura('ISC-204','Paradigmas de Programacion',4).
 asignatura('ISC-211','Estructuras de Datos',4).
+asignatura('IE-326','Instalaciones Eléctricas para centros de Datos',4).
 asignatura('ISC-321','Fundamentos de Bases de Datos',5).
 asignatura('ISC-351','Contabilidad Financiera',4).
 asignatura('ISC-331','Redes de Datos I',4).
@@ -71,8 +72,38 @@ asignatura('ISC-544','Auditoria Informatica',4).
 asignatura('ISC-546','Ejecucion de Proyectos de TI',4).
 
 /*
-Requisitos (Clase,requisito1,requisito2)
+requisitos (Clase,requisito1,requisito2)
 */
 
+requisitos('ISC-101','NINGUNO').
+requisitos('ISC-102','ISC-101').
+requisitos('ISC-103','ISC-102').
 requisitos('ISC-204','ISC-103').
+requisitos('ISC-211','MM-420').
+requisitos('IE-326','FS-200').
+requisitos('ISC-321','MM-320').
+requisitos('ISC-351','AGE-102').
+requisitos('ISC-331','IE-326').
+requisitos('ISC-333','ISC-211').
+requisitos('ISC-312','ISC-211','ISC-321').
+requisitos('ISC-334','ISC-333').
+requisitos('ISC-313','ISC-312').
 requisitos('ISC-306','ISC-341','ISC-321').
+requisitos('ISC-336','ISC-334').
+requisitos('ISC-407','ISC-305').
+requisitos('ISC-414','ISC-313','MM-401').
+requisitos('ISC-435','ISC-334','ISC-332').
+requisitos('ISC-437','ISC-336').
+requisitos('ISC-408','ISc-306','ISC407').
+requisitos('ISC-422','ISC-321').
+requisitos('ISC-442','ISC-435').
+requisitos('ISC-443','ISC-306').
+requisitos('ISC-409','ISC-408').
+requisitos('ISC-423','ISC-422').
+requisitos('ISC-415','ISC-305','ISC-437','ISC-332').
+requisitos('ISC-445','ISC-443','ISC-442').
+requisitos('ISC-552','ISC-415','ISC-445','ISC-423').
+requisitos('ISC-544','ISC-442','ISC-306').
+requisitos('ISC-546','ISC-445').
+
+
