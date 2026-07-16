@@ -1,36 +1,44 @@
-estudiante('Javier Eduardo Flores Valladares','20221002840','flores.javier@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Jose Eduardo Suarez Valdez','20211003860','jose.valdez@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Maria Jose Castillo Lopez','20211001850','maria.castillo@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Mario Josue Cruz Ochoa','20231001441','mario.cruz@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Josue Manuel Espinal Flores','20241004845','josue.espinal@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Kevin Omar Morales Pineda','20231002241','kevin.morales@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Brayan David Perdomo Salgado','20211002341','brayan.salgado@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Claudia Patricia Morales Zelaya','20221002243','claudia.zelaya@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Mercedes Paola Lagos Caceres','20241002821','mercedes.lagos@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Jeremy Alfredo Jimenes Alfaro','20231001834','alfredo.alfaro@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Alejandro Manuel Flores Suazo','20201002174','alejandro.suazo@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Mauricio Joel Perez Dominguez','20271007883','mauricio.dominguez@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Allan Daniel Mendez Mendoza','20251002314','allan.mendez@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Victor Fernando Mejia Ramos','20241002864','victor.mejia@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Daniela Elizabeth Osorio Caceres','20261002647','daniela.osorio@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Lucia Fernanda Mejia Perdomo','20261002149','lucia.mejia@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Brenda Mariel','20201002341','brenda.mariel@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Samuel Edgardo Matamoros Paz','20231004841','samuel.matamoros@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Pedro Fabian Gonzales Porro','20261001407','pedro.porro@unah.hn','Ingenieria en Sistemas Computacionales').
-estudiante('Vanessa Yamileth Toro Coello','20251002560','vanessa.toro@unah.hn','Ingenieria en Sistemas Computacionales').
 
-profesor('Carlos Jose Estrada Matamoro','0801199801452','carlos.estrada@unah.edu.hn').
-profesor('Sofia Martinez Lopez','0501200002341','sofia.martinez@unah.edu.hn').
-profesor('Fernando Alonso Gomez Cruz','0101199900892','fernando.gomez@unah.edu.hn').
-profesor('Ricardo Andres Morales Mendoza','0801199703415','ricardo.morales@unah.edu.hn').
-profesor('Jorge Luis Reyes Padilla','1804200101123','jorge.reyes@unah.edu.hn').
-profesor('Ana Manuela Castro Rivera','0801200004567','ana.castro.r@unah.edu.hn').
-profesor('Marcos Omar Morales Pineda','0601199801890','omar.morales@unah.edu.hn').
-profesor('Franklin Joel Dubon Caballero','0801200202104','frankin.caballero@unah.edu.hn').
-profesor('Axel Roberto Zelaya Ortiz','1501199605678','axel.ortiz@unah.edu.hn').
-profesor('Sonia Raquel Morales Calderon','0501199903891','sonia.calderon@unah.edu.hn').
-profesor('Jairo Alexander Sierra Andrade','0801200102903','jairo.sierra@unah.edu.hn').
-profesor('Erika Yaneth Benítez Osorio','0301199804125','erika.benitez@unah.edu.hn').
+/*
+estudiante(NombreCompleto,Numero de cuenta,correo)
+*/
+estudiante('Javier Eduardo Flores Valladares','20221002840','flores.javier@unah.hn').
+estudiante('Jose Eduardo Suarez Valdez','20211003860','jose.valdez@unah.hn').
+estudiante('Maria Jose Castillo Lopez','20211001850','maria.castillo@unah.hn').
+estudiante('Mario Josue Cruz Ochoa','20231001441','mario.cruz@unah.hn').
+estudiante('Josue Manuel Espinal Flores','20241004845','josue.espinal@unah.hn').
+estudiante('Kevin Omar Morales Pineda','20231002241','kevin.morales@unah.hn').
+estudiante('Brayan David Perdomo Salgado','20211002341','brayan.salgado@unah.hn').
+estudiante('Claudia Patricia Morales Zelaya','20221002243','claudia.zelaya@unah.hn').
+estudiante('Mercedes Paola Lagos Caceres','20241002821','mercedes.lagos@unah.hn').
+estudiante('Jeremy Alfredo Jimenes Alfaro','20231001834','alfredo.alfaro@unah.hn').
+estudiante('Alejandro Manuel Flores Suazo','20201002174','alejandro.suazo@unah.hn').
+estudiante('Mauricio Joel Perez Dominguez','20271007883','mauricio.dominguez@unah.hn').
+estudiante('Allan Daniel Mendez Mendoza','20251002314','allan.mendez@unah.hn').
+estudiante('Victor Fernando Mejia Ramos','20241002864','victor.mejia@unah.hn').
+estudiante('Daniela Elizabeth Osorio Caceres','20261002647','daniela.osorio@unah.hn').
+estudiante('Lucia Fernanda Mejia Perdomo','20261002149','lucia.mejia@unah.hn').
+estudiante('Brenda Mariel','20201002341','brenda.mariel@unah.hn').
+estudiante('Samuel Edgardo Matamoros Paz','20231004841','samuel.matamoros@unah.hn').
+estudiante('Pedro Fabian Gonzales Porro','20261001407','pedro.porro@unah.hn').
+estudiante('Vanessa Yamileth Toro Coello','20251002560','vanessa.toro@unah.hn').
+
+
+/*
+profesor(NombreCompleto,Numero de Identidad,correo)
+*/
+profesor('Carlos Jose Estrada Matamoro','0801198801452','carlos.estrada@unah.edu.hn').
+profesor('Sofia Martinez Lopez','0501199002341','sofia.martinez@unah.edu.hn').
+profesor('Fernando Alonso Gomez Cruz','0101198000892','fernando.gomez@unah.edu.hn').
+profesor('Ricardo Andres Morales Mendoza','0801197803415','ricardo.morales@unah.edu.hn').
+profesor('Jorge Luis Reyes Padilla','1804197001123','jorge.reyes@unah.edu.hn').
+profesor('Ana Manuela Castro Rivera','0801197604567','ana.castro.r@unah.edu.hn').
+profesor('Marcos Omar Morales Pineda','0601198201890','omar.morales@unah.edu.hn').
+profesor('Franklin Joel Dubon Caballero','0801197902104','frankin.caballero@unah.edu.hn').
+profesor('Axel Roberto Zelaya Ortiz','1501198605678','axel.ortiz@unah.edu.hn').
+profesor('Sonia Raquel Morales Calderon','0501197403891','sonia.calderon@unah.edu.hn').
+profesor('Jairo Alexander Sierra Andrade','0801198502903','jairo.sierra@unah.edu.hn').
+profesor('Erika Yaneth Benítez Osorio','0301197104125','erika.benitez@unah.edu.hn').
 
 
 /*
@@ -94,7 +102,7 @@ requisitos('ISC-407','ISC-305').
 requisitos('ISC-414','ISC-313','MM-401').
 requisitos('ISC-435','ISC-334','ISC-332').
 requisitos('ISC-437','ISC-336').
-requisitos('ISC-408','ISc-306','ISC407').
+requisitos('ISC-408','ISC-306','ISC407').
 requisitos('ISC-422','ISC-321').
 requisitos('ISC-442','ISC-435').
 requisitos('ISC-443','ISC-306').
@@ -106,4 +114,36 @@ requisitos('ISC-552','ISC-415','ISC-445','ISC-423').
 requisitos('ISC-544','ISC-442','ISC-306').
 requisitos('ISC-546','ISC-445').
 
+/*
+aula(numeroAula,Piso,tipoAula)
+*/
+
+aula('101','P1','aula').
+aula('105','P1','aula').
+aula('202','P2','Lab').
+aula('205','P2','Lab').
+aula('305','P3','aula').
+aula('302','P3','aula').
+aula('401','P4','Lab').
+aula('403','P4','Lab').
+aula('402','P4','aula').
+
+/*
+clase(codigoClase,DNI profesor,numero de cuenta estudiante,calificacion estudiante)
+*/
+
+%estudiante1
+
+clase('ISC-101','0801198801452','20221002840',82).
+clase('ISC-102','0501199002341','20221002840',80).
+clase('ISC-103','0601198201890','20221002840',86).
+clase('ISC-204','0801197803415','20221002840',70).
+clase('ISC-211','0301197104125','20221002840',75).
+clase('IE-326','0301197104125','20221002840',68).
+clase('ISC-321','0801197604567','20221002840',90).
+clase('ISC-351','0501199002341','20221002840',81).
+clase('ISC-333','1804197001123','20221002840',82).
+clase('ISC-334','1501198605678','20221002840',69).
+
+%estudiante2
 
