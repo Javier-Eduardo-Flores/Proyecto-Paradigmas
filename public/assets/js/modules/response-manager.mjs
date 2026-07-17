@@ -7,9 +7,9 @@ import { box } from "./dom-box.mjs";
 const formattedResponse = async (consulta) => {
 
     if (consulta === "estudiantes"){
-        const estudiantes = await getData("../../../assets/api/PHP/estudiantes.php");
+        const estudiantes = await getData("/assets/api/PHP/estudiantes.php");
 
-        const nombres = estudiantes.Estudiantes.map(estudiante => box( "rgba(255, 0, 0, 1)","rgba(255, 255, 255, 1)",estudiante.Nombre+"<br>"+estudiante.Cuenta));
+        const nombres = estudiantes.Estudiantes.map(estudiante => box( "rgba(255, 0, 0, 1)","rgba(255, 255, 255, 1)", estudiante.Nombre+"<br>"+estudiante.Cuenta));
         
         return nombres.join("");
     }

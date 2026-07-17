@@ -5,7 +5,7 @@ No olvidar agregar la firma de Inestroza
 import sys
 import json
 
-keys = ["Nombre","Cuenta","Correo","Carrera"]
+keys = ["Nombre","Cuenta","Correo"]
 
 read_data = lambda: str(sys.stdin.read()).strip().split("\n")
 process_item = lambda text: str(text).strip().split(",")
