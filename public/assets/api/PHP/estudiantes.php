@@ -13,7 +13,7 @@ header("Content-Type: application/json");
 ["resultadoConsulta" => $consultaProlog] = include __DIR__."/../../../../service/PHP/Consultas-JSON/index.php";
 
 
-const consulta = "swipl -s \"%s\" -g \"forall(estudiante(N,I,J,K), format('~w,~w,~w,~w~n', [N,I,J,K]))\" -t halt | python3 %s";
+const consulta = "swipl -s \"%s\" -g \"forall(estudiante(N,I,J), format('~w,~w,~w~n', [N,I,J]))\" -t halt | python3 %s";
 
 $json = $consultaProlog(consulta);
 
