@@ -102,7 +102,7 @@ requisitos('ISC-407','ISC-305','','').
 requisitos('ISC-414','ISC-313','MM-401','').
 requisitos('ISC-435','ISC-334','ISC-332','').
 requisitos('ISC-437','ISC-336','','').
-requisitos('ISC-408','ISC-306','ISC407','').
+requisitos('ISC-408','ISC-306','ISC-407','').
 requisitos('ISC-422','ISC-321','','').
 requisitos('ISC-442','ISC-435','','').
 requisitos('ISC-443','ISC-306','','').
