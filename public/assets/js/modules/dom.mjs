@@ -26,6 +26,9 @@ const printAsAppend = (content) => {
     document.body.appendChild(content);
 };
 
+const printAsAppend = (content) =>{
+    document.body.appendChild(content);
+}
 
 export{
     init,
