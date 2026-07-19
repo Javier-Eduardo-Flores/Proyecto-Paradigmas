@@ -12,7 +12,6 @@ const placeholder = (name) =>{
     return "Placeholder";
 }
 
-
 const tag = (name, content = `${placeholder(name)} content ${name}`, style ="") => {
     return `<${name} ${style}> ${content} </${name}>`;
 };
