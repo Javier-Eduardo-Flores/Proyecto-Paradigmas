@@ -6,9 +6,30 @@
  * @since 26/06/25
  * 
  */
+
+const placeholder = (name) =>{
+    if(name ===`h1`) return "Titulo"
+    return "Placeholder";
+}
+
+
 const tag = (name, content = `${placeholder(name)} content ${name}`, style ="") => {
     return `<${name} ${style}> ${content} </${name}>`;
 };
+
+
+const tagOO = (name,content=`${placeholder(name)} content 
+${name}`,color="black",backgroundColor="white",fontFamily="console",fontSize="12px",border="")=>{
+    let obj = document.createElement(name);
+    obj.style.color = color;
+    obj.style.backgroundColor = backgroundColor;
+    obj.style.fontFamiliy = fontFamily;
+    obj.style.fontSize = fontSize;
+    obj.style.border = border;
+    obj.innerHTML = content;
+    return obj;
+}
+
 
 const h = (content) => tag("h1", content);
 const p = (content) => tag("p", content);
