@@ -18,13 +18,12 @@ const tag = (name, content = `${placeholder(name)} content ${name}`, style ="") 
 
 
 const tagOO = (name,content=`${placeholder(name)} content 
-${name}`,color="black",backgroundColor="white",fontFamily="console",fontSize="12px",border="")=>{
+${name}`,color="black",backgroundColor="white",fontFamily="monospace",fontSize="12px")=>{
     let obj = document.createElement(name);
     obj.style.color = color;
     obj.style.backgroundColor = backgroundColor;
-    obj.style.fontFamiliy = fontFamily;
+    obj.style.fontFamily = fontFamily;
     obj.style.fontSize = fontSize;
-    obj.style.border = border;
     obj.innerHTML = content;
     return obj;
 }
@@ -37,5 +36,6 @@ const b = (content) => tag("strong", content);
 export{
     h,
     p,
-    b
+    b, 
+    tagOO
 }

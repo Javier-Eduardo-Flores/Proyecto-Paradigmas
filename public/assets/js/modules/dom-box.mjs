@@ -1,3 +1,7 @@
+/*
+NO OLVIDAR PONER LA FIRMA DEL INGENIERO
+*/
+
 const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     let obj = document.createElement("div");
     obj.style.color = colorFg;

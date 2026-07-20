@@ -9,7 +9,9 @@
 
 import {h,p,b} from "./dom-basic-html.mjs";
 import {getData} from "./fetch.mjs";
-import {formattedResponse} from "./response-manager.mjs";
+import {formattedIndividualResponse} from "./response-manager.mjs";
+import { createTabla } from "./dom-tabla.mjs";
+import { box } from "./dom-box.mjs";
 
 const init = () =>{
     document.body.style.backgroundColor = `black`;
@@ -26,15 +28,13 @@ const printAsAppend = (content) => {
     document.body.appendChild(content);
 };
 
-const printAsAppend = (content) =>{
-    document.body.appendChild(content);
-}
-
 export{
     init,
     h,p,b,
     print,
     printAsAppend,
     getData,
-    formattedResponse
+    formattedIndividualResponse, 
+    createTabla,
+    box
 };
