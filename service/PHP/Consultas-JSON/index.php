@@ -1,4 +1,12 @@
 <?php
+/**
+ * DOM: Document Object Model
+ * @author jose.inestroza@unah.edu.hn
+ * @version 0.1.1
+ * @date 26/06/29
+ * @since 26/06/25
+ * 
+ */
 
 $fixJson = fn($text) => str_replace("'", "\"", $text);
 
