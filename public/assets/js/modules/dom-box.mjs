@@ -1,6 +1,11 @@
-/*
-NO OLVIDAR PONER LA FIRMA DEL INGENIERO
-*/
+/**
+ * @author jose.inestroza@unah.edu.hn
+ * @version 0.1.1
+ * @date 26/06/29
+ * @since 26/06/25
+ * 
+ */
+
 
 const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     let obj = document.createElement("div");

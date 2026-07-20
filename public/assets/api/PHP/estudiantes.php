@@ -1,11 +1,15 @@
 <?php
 /*
-
+ * @author jose.inestroza@unah.edu.hn
+ * @author Machigua
+ * @version 0.1.1
+ * @date 26/06/29
+ * @since 26/06/25
+ * 
+ * 
 Endpoint encargado de mandar la consulta sobre los estudiantes a Prolog, valiendose del servicio
 Consultas-JSON
-@author Machigua
 
-no estoy seguro de si agregar la autoria de Inestroza pq este codigo es practicamente lo que hicimos hoy 16/07/26 xdd
 */ 
 
 header("Content-Type: application/json");
