@@ -3,15 +3,15 @@ No olvidar agregar la firma de Inestroza
 """
 
 import sys
-import json
 
-keys = ["Nombre","Cuenta","Correo"]
+tipo = sys.argv[1]
+keys = sys.argv[2].split(",")
 
 read_data = lambda: str(sys.stdin.read()).strip().split("\n")
 process_item = lambda text: str(text).strip().split(",")
 
 process_data = lambda array, keys: {
-    "Estudiantes": [
+    tipo: [
         
     {
         f"{keys[key]}": f"{process_item(item)[key]}" 
