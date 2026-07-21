@@ -12,6 +12,7 @@ import {getData} from "./fetch.mjs";
 import {formattedIndividualResponse} from "./response-manager.mjs";
 import { createTabla } from "./dom-tabla.mjs";
 import { box } from "./dom-box.mjs";
+import { menu } from "./dom-menu.mjs";
 
 const init = () =>{
     document.body.style.backgroundColor = `black`;
@@ -36,5 +37,5 @@ export{
     getData,
     formattedIndividualResponse, 
     createTabla,
-    box
+    box,menu
 };
