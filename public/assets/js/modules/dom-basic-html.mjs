@@ -17,8 +17,8 @@ const tag = (name, content = `${placeholder(name)} content ${name}`, style ="") 
 };
 
 
-const tagOO = (name,content=`${placeholder(name)} content 
-${name}`,color="black",backgroundColor="white",fontFamily="monospace",fontSize="12px",width="auto",height="auto")=>{
+const tagOO = (name,content=`${placeholder(name)} content ${name}`,
+    color="black",backgroundColor="white",fontFamily="monospace",fontSize="12px",width="auto",height="auto")=>{
     let obj = document.createElement(name);
     obj.style.color = color;
     obj.style.backgroundColor = backgroundColor;
@@ -38,5 +38,5 @@ export{
     h,
     p,
     b, 
-    tagOO
+    tag,tagOO
 }
