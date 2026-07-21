@@ -1,5 +1,6 @@
 /**
  * @author jose.inestroza@unah.edu.hn
+ * @author flores.javier@unah.hn
  * @version 0.1.1
  * @date 26/06/29
  * @since 26/06/25
@@ -23,6 +24,26 @@ const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     return obj.outerHTML;
 };
 
+/**
+ * @author : flores.javier@unah.hn
+ * @date : 20-07-2026
+ * 
+ * */
+const cajaFlexible = (name="div",width="400px",height="100px",position="relative",backgroundColor="#1F2937",color="#F3EFE0",gap="10px")=>{
+    let obj = document.createElement(name);
+    obj.style.width = width;
+    obj.style.height = height;
+    obj.style.position = position;
+    obj.style.backgroundColor = backgroundColor;
+    obj.style.display = "flex";
+    obj.style.color = color;
+    obj.style.gap = gap;
+    obj.style.flexWrap = "wrap";
+    obj.style.padding = "5px 10px";
+    obj.style.justifyContent = "space-between";
+    return obj;
+}
+
 export{
-    box
+    box,cajaFlexible
 };
