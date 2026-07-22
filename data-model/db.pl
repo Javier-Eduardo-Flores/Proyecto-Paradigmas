@@ -78,41 +78,50 @@ asignatura('ISC-445','Proyectos de TI',4).
 asignatura('ISC-552','Seminario de Investigacion',4).
 asignatura('ISC-544','Auditoria Informatica',4).
 asignatura('ISC-546','Ejecucion de Proyectos de TI',4).
+asignatura('MM-420','Matematicas Discretas',4).
+asignatura('FS-200','Fisica General II',5).
+asignatura('AGE-120','Administracion',4).
 
+
+asignaturasCarrera(['ISC-101','ISC-102','ISC-103','ISC-204','ISC-211','IE-326','ISC-321',
+'ISC-351','ISC-331','ISC-333','ISC-312','ISC-341','ISC-332','ISC-334','ISC-305','ISC-313',
+'ISC-306','ISC-336','ISC-407','ISC-414','ISC-435','ISC-437','ISC-408','ISC-422','ISC-442',
+'ISC-443','ISC-409','ISC-423','ISC-415','ISC-445','ISC-552','ISC-544','ISC-546','MM-420','FS-200','AGE-120'
+])
 /*
 requisitos (Clase,requisito1,requisito2,requisito3,requisito4).
 */
 
-requisitos('ISC-101','NINGUNO','','').
-requisitos('ISC-102','ISC-101','','').
-requisitos('ISC-103','ISC-102','','').
-requisitos('ISC-204','ISC-103','','').
-requisitos('ISC-211','MM-420','','').
-requisitos('IE-326','FS-200','','').
-requisitos('ISC-321','MM-320','','').
-requisitos('ISC-351','AGE-102','','').
-requisitos('ISC-331','IE-326','','').
-requisitos('ISC-333','ISC-211','','').
-requisitos('ISC-312','ISC-211','ISC-321','').
-requisitos('ISC-334','ISC-333','','').
-requisitos('ISC-313','ISC-312','','').
-requisitos('ISC-306','ISC-341','ISC-321','').
-requisitos('ISC-336','ISC-334','','').
-requisitos('ISC-407','ISC-305','','').
-requisitos('ISC-414','ISC-313','MM-401','').
-requisitos('ISC-435','ISC-334','ISC-332','').
-requisitos('ISC-437','ISC-336','','').
-requisitos('ISC-408','ISC-306','ISC-407','').
-requisitos('ISC-422','ISC-321','','').
-requisitos('ISC-442','ISC-435','','').
-requisitos('ISC-443','ISC-306','','').
-requisitos('ISC-409','ISC-408','','').
-requisitos('ISC-423','ISC-422','','').
-requisitos('ISC-415','ISC-305','ISC-437','ISC-332').
-requisitos('ISC-445','ISC-443','ISC-442','').
-requisitos('ISC-552','ISC-415','ISC-445','ISC-423').
-requisitos('ISC-544','ISC-442','ISC-306','').
-requisitos('ISC-546','ISC-445','','').
+requisitos('ISC-101',[]).
+requisitos('ISC-102',['ISC-101']).
+requisitos('ISC-103',['ISC-102']).
+requisitos('ISC-204',['ISC-103']).
+requisitos('ISC-211',['MM-420']).
+requisitos('IE-326',['FS-200']).
+requisitos('ISC-321',['MM-420']).
+requisitos('ISC-351',['AGE-102']).
+requisitos('ISC-331',['IE-326']).
+requisitos('ISC-333',['ISC-211']).
+requisitos('ISC-312',['ISC-211','ISC-321']).
+requisitos('ISC-334',['ISC-333']).
+requisitos('ISC-313',['ISC-312']).
+requisitos('ISC-306',['ISC-341','ISC-321']).
+requisitos('ISC-336',['ISC-334']).
+requisitos('ISC-407',['ISC-305']).
+requisitos('ISC-414',['ISC-313','MM-401']).
+requisitos('ISC-435',['ISC-334','ISC-332']).
+requisitos('ISC-437',['ISC-336']).
+requisitos('ISC-408',['ISC-306','ISC-407']).
+requisitos('ISC-422',['ISC-321']).
+requisitos('ISC-442',['ISC-435']).
+requisitos('ISC-443',['ISC-306']).
+requisitos('ISC-409',['ISC-408']).
+requisitos('ISC-423',['ISC-422']).
+requisitos('ISC-415',['ISC-305','ISC-437','ISC-332']).
+requisitos('ISC-445',['ISC-443','ISC-442']).
+requisitos('ISC-552',['ISC-415','ISC-445','ISC-423']).
+requisitos('ISC-544',['ISC-442','ISC-306']).
+requisitos('ISC-546',['ISC-445']).
 
 /*
 aula(numeroAula,Piso,tipoAula)
@@ -389,3 +398,29 @@ clase('ISC-101','0801198801452','20251002560',74).
 clase('ISC-102','0501199002341','20251002560',96).
 clase('ISC-103','0601198201890','20251002560',89).
 
+/**
+Reglas en prolog, Recordar cambiarlas a un archivo en servicios
+*/
+
+profesor_estudiante(DNIProfesor,NombreEstudiante,CuentaEstudiante,CorreoEstudiante):-
+    clase(_,DNIProfesor,CuentaEstudiante,_),
+    estudiante(NombreEstudiante,CuentaEstudiante,CorreoEstudiante).
+
+
+obtenerRequisito([Head| _],CodigoRequisito,NombreRequisito,UVRequisito):-
+    asignatura(Head,NombreRequisito,UVRequisito),
+    asignatura(CodigoRequisito,NombreRequisito,UVRequisito).
+    
+    
+obtenerRequisito([_ |Tail],CodigoRequisito,NombreRequisito,UVRequisito):-
+    obtenerRequisito(Tail,CodigoRequisito,NombreRequisito,UVRequisito).
+    
+
+requisitos_clase(CodigoClase,CodigoRequisito,NombreRequisito,UVRequisito):-
+    requisitos(CodigoClase,ListaRequisitos),
+    obtenerRequisito(ListaRequisitos,CodigoRequisito,NombreRequisito,UVRequisito).
+  
+
+ClaseXEstudiante(Cuenta,CodigAsignatura,NombreAsignatura,Calificacion):-
+    clase(CodigoClase,_,Cuenta,Calificacion),
+    asignatura(CodigoClase,NombreAsignatura,_).
