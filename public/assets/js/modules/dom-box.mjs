@@ -40,7 +40,7 @@ const cajaFlexible = (name="div",width="400px",height="100px",position="relative
     obj.style.gap = gap;
     obj.style.flexWrap = "wrap";
     obj.style.padding = "5px 10px";
-    obj.style.justifyContent = "space-between";
+    obj.style.justifyContent = "space-around";
     return obj;
 }
 

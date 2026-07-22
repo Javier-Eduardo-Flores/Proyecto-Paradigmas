@@ -7,16 +7,17 @@
  * 
  */
 
-import {h,p,b} from "./dom-basic-html.mjs";
-import {getData} from "./fetch.mjs";
-import {formattedIndividualResponse} from "./response-manager.mjs";
+import { h,p,b } from "./dom-basic-html.mjs";
+import { getData } from "./fetch.mjs";
+import { formattedIndividualResponse } from "./response-manager.mjs";
 import { createTabla } from "./dom-tabla.mjs";
 import { box } from "./dom-box.mjs";
 import { menu } from "./dom-menu.mjs";
+import { buttonDemoMessage } from "./dom-events.mjs";
 
 const init = () =>{
-    document.body.style.backgroundColor = `black`;
-    document.body.style.color = `white`;
+    document.body.style.backgroundColor = `	#1F2937`;
+    document.body.style.color = `#F3EFE0`;
     document.body.style.fontSize = `24px`;
     document.body.style.fontFamily = `monospace`;
 };
@@ -37,5 +38,6 @@ export{
     getData,
     formattedIndividualResponse, 
     createTabla,
-    box,menu
+    box,menu,
+    buttonDemoMessage
 };
