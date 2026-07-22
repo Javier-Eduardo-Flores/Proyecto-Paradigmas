@@ -8,6 +8,7 @@ import {cajaFlexible} from "./dom-box.mjs"
 import { tag, tagOO } from "./dom-basic-html.mjs";
 import { buttonDemoMessage } from "./dom-events.mjs";
 import { createTabla } from "./dom-tabla.mjs";
+import { dialog } from "./dom-dialog.mjs";
 
 
 /**
@@ -20,45 +21,34 @@ import { createTabla } from "./dom-tabla.mjs";
 
 
 
-const infoGetter = async(clickEvent, consulta) => {
-    
-    let dialog = document.createElement("dialog");
-    
-    dialog.style.backgroundColor = "#CC8B86";
-    dialog.style.border = "2px solid white";
-    dialog.style.borderRadius = "10px";
-    dialog.style.padding = "20px";
-    
-    dialog.style.width = "50vw";
-    dialog.style.height = "50vh";
-    dialog.style.overflow = "auto";
-    
-    let close = document.createElement("button");
+const infoGetter = async(modal, consulta) => 
+    {
+    const tabla = await createTabla(consulta);
+    modal.appendChild(tabla);
 
-    close.textContent = "Cerrar";
-    close.onclick = () => {
-        dialog.close();
-        dialog.remove();
     };
 
-    dialog.innerHTML = "";
-    dialog.appendChild(await createTabla(consulta));
-    document.body.appendChild(dialog);
-    dialog.appendChild(close);
-    dialog.showModal();
-    dialog.scrollTop = 0;
-   
-};
-
-const menu = ()=> {
+const menu = async () => {
 let header = cajaFlexible("header","100%","50px","fixed");  
-let item1 = buttonDemoMessage("Estudiantes","","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px", (clickEvent) => infoGetter(clickEvent, "estudiantes"));
-let item2 = buttonDemoMessage("Profesores","","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px", (clickEvent) => infoGetter(clickEvent, "profesores"));
-let item3 = buttonDemoMessage("Asignaturas","","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px", (clickEvent) => infoGetter(clickEvent, "asignaturas"));
+const [button1, modal1] = dialog("dialog-estudiantes","Estudiantes","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+await infoGetter(modal1, "estudiantes");
 
-header.appendChild(item1);
-header.appendChild(item2);
-header.appendChild(item3);
+const [button2, modal2] = dialog("dialog-profesores","Profesores","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+await infoGetter(modal2, "profesores");
+
+const [button3, modal3] = dialog("dialog-asignaturas","Asignaturas","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+await infoGetter(modal3, "asignaturas");
+
+header.appendChild(button1);
+header.appendChild(modal1);
+
+header.appendChild(button2);
+header.appendChild(modal2);
+
+header.appendChild(button3);
+header.appendChild(modal3);
+
+
 return header;
 }
 

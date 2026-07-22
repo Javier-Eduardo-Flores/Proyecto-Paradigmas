@@ -14,6 +14,7 @@ import { createTabla } from "./dom-tabla.mjs";
 import { box } from "./dom-box.mjs";
 import { menu } from "./dom-menu.mjs";
 import { buttonDemoMessage } from "./dom-events.mjs";
+import { dialog } from "./dom-dialog.mjs";
 
 const init = () =>{
     document.body.style.backgroundColor = `	#1F2937`;
@@ -39,5 +40,6 @@ export{
     formattedIndividualResponse, 
     createTabla,
     box,menu,
-    buttonDemoMessage
+    buttonDemoMessage,
+    dialog
 };

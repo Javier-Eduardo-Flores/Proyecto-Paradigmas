@@ -18,13 +18,7 @@ sus salidas, favor disculpar.
 document.body.style.padding = 0;
 document.body.style.margin = 0;
 
-const estudiantesTabla = await createTabla("estudiantes");
-// const profesoresTabla = await createTabla("profesores");
-// const asignaturasTabla = await createTabla("asignaturas");
+const menuContent = await menu();
+ 
+printAsAppend(menuContent);
 
- printAsAppend(menu());
-// printAsAppend (estudiantesTabla);
-// print("<br>");
-// printAsAppend (profesoresTabla);
-// print("<br>");
-// printAsAppend (asignaturasTabla);
