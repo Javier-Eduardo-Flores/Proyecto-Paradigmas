@@ -5,7 +5,7 @@
 
 const dialog = (id, buttonText = "My Button",
     color="",backgroundColor="",fontFamily="",fontSize="",
-    width="auto",height="auto") => 
+    width="auto",height="auto", modalBackgroundColor="#CC8B86") => 
         
     {
     const button = document.createElement("button");
@@ -26,7 +26,7 @@ const dialog = (id, buttonText = "My Button",
 
     const modal = document.createElement("dialog");
     modal.id = id;
-    modal.style.backgroundColor = "#CC8B86";
+    modal.style.backgroundColor = modalBackgroundColor;
     modal.style.border = "2px solid white";
     modal.style.borderRadius = "10px";
     modal.style.padding = "20px";

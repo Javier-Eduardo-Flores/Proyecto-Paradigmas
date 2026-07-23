@@ -21,7 +21,7 @@ const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     obj.style.width = "max-content";
     obj.innerHTML = content;
     
-    return obj.outerHTML;
+    return obj;
 };
 
 /**
