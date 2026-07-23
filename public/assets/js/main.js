@@ -1,5 +1,6 @@
 import { tag, tagOO } from "./modules/dom-basic-html.mjs";
-import {init,h,p,b,print,printAsAppend,getData,formattedIndividualResponse,createTabla, box,menu} from "./modules/dom.mjs";
+import {init,h,p,b,print,printAsAppend,getData,formattedIndividualResponse,
+    createTabla, box,menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina} from "./modules/dom.mjs";
 init();
 /*
 
@@ -18,7 +19,9 @@ sus salidas, favor disculpar.
 document.body.style.padding = 0;
 document.body.style.margin = 0;
 
-const menuContent = await menu();
+
  
-printAsAppend(menuContent);
+printAsAppend(renderMenuSuperior());
+printAsAppend(renderMenuLateral());
+printAsAppend(renderCentroPagina());
 
