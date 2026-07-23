@@ -12,15 +12,15 @@ import { getData } from "./fetch.mjs";
 import { formattedIndividualResponse } from "./response-manager.mjs";
 import { createTabla } from "./dom-tabla.mjs";
 import { box } from "./dom-box.mjs";
-import { menu } from "./dom-menu.mjs";
+import { menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina } from "./dom-menu.mjs";
 import { buttonDemoMessage } from "./dom-events.mjs";
 import { dialog } from "./dom-dialog.mjs";
 
 const init = () =>{
-    document.body.style.backgroundColor = `	#1F2937`;
-    document.body.style.color = `#F3EFE0`;
+    document.body.style.backgroundColor = ` #F3EFE0`;
+    document.body.style.color = ` #1F2937`;
     document.body.style.fontSize = `24px`;
-    document.body.style.fontFamily = `monospace`;
+    document.body.style.fontFamily = `sans-serif`;
 };
 
 const print = (content) => {
@@ -39,7 +39,7 @@ export{
     getData,
     formattedIndividualResponse, 
     createTabla,
-    box,menu,
+    box,menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina,
     buttonDemoMessage,
     dialog
 };

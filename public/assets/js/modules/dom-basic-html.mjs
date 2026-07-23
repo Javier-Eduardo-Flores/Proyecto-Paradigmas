@@ -30,6 +30,12 @@ const tagOO = (name,content=`${placeholder(name)} content ${name}`,
     return obj;
 }
 
+const tagDinamico = (name,opt={"color":"#F3EFE0"})=>{
+    let element = document.createElement(name);
+    Object.assign(element.style,opt);
+    return element;
+}
+
 const h = (content) => tag("h1", content);
 const p = (content) => tag("p", content);
 const b = (content) => tag("strong", content);
@@ -38,5 +44,5 @@ export{
     h,
     p,
     b, 
-    tag,tagOO
+    tag,tagOO, tagDinamico
 }
