@@ -7,6 +7,8 @@
  * 
  */
 
+import { tagOO } from "./dom-basic-html.mjs";
+
 
 const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     let obj = document.createElement("div");
@@ -44,6 +46,37 @@ const cajaFlexible = (name="div",width="400px",height="100px",position="relative
     return obj;
 }
 
+
+/**
+ * @author jose.inestroza@unah.edu.hn
+ * @author flores.javier@unah.hn
+ * @version 0.1.1
+ * @date 26/07/22
+ * @since 26/07/22
+ * MetodO column que se vio en clase con modificaciones
+ */
+
+
+const boxPosicional = (opt = {"left":0},position="fixed",width="50vw",height="100vh",
+    color="#F3EFE0",backgroundColor="#1A659E",fontFamily="sans-serif") => {
+	const div = tagOO("div","",color,backgroundColor,fontFamily);
+	div.style.position = position;
+	div.style.top = "0px";
+
+	div.style.width = width;
+	div.style.height= height;
+	
+	div.style.overflowX = "hidden";
+	div.style.overflowY = "auto"; 
+	Object.assign(div.style, opt);
+	return div;
+}
+const menuSuperior = boxPosicional({"left":0},"fixed","100vw","70px");
+const menuLateral = boxPosicional({"right":0},"absolute","18vw","100vh","#F3EFE0","#111827");
+const centroPagina = boxPosicional({"left":0},"absolute","82vw","100vh","#111827","#F9FAFB");
+
+
+
 export{
-    box,cajaFlexible
+    box,cajaFlexible,menuLateral,centroPagina,menuSuperior
 };
