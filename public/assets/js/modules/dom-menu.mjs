@@ -70,28 +70,41 @@ const clearAction = async () =>{
 const renderMenuSuperior = ()=>{
 let header = menuSuperior;
 header.style.zIndex = 100;
-let logo = tagOO("div","Logo","#0a0606","#666262","sans-serif","16px","100px","40px");
+let logo = tagOO("div","","#0a0606","","sans-serif","16px","100px","100px");
 logo.style.position = "absolute";
-logo.style.top = "10px";
+logo.style.top = "-1px";
 logo.style.left = "10px"
 logo.style.textAlign = "center";
+
+const imagen = document.createElement("img");
+
+imagen.src = "./assets/img/logo.png";
+imagen.style.width = "80px";
+imagen.style.height = "80px";
+imagen.style.objectFit = "contain";
+imagen.style.display = "block";
+imagen.style.margin = "auto";
+
+logo.appendChild(imagen);
+
+
 let titulo = tagDinamico("h2",
     {"color":"#F3EFE0",
         "font-size":"30px",
         "position":"absolute",
-        "width":"200px",
+        "width":"auto",
         "height":"60px",
         "padding":0,
         "margin":0,
         "justify-content":"center",
         "text-align":"center",
         "line-height":"60px",
-        "left":"42vw",
+        "left":"30vw",
         "font-weight":"bold",
         "top":0
     });
 
-titulo.innerHTML = "Titulo Pagina";
+titulo.innerHTML = "Proyecto Paradigmas de Programacion";
 let AcercaDe = tagOO("button","Acerca De","#F3EFE0","#CC8B86","sans-serif","16px","100px","40px");
 AcercaDe.style.position = "absolute";
 AcercaDe.style.right = "12px";
@@ -123,17 +136,30 @@ const renderCentroPagina = ()=>{
 }
 
 const menu = async () => {
-let header = cajaFlexible("header","100%","50px","fixed");  
-const [button1, modal1] = dialog("dialog-estudiantes","Estudiantes","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+let header = cajaFlexible("header","100%","50vh"); 
+header.style.display = "block";
+const [button1, modal1] = dialog("dialog-estudiantes","Estudiantes","#F3EFE0","#1A659E","sans-serif","35px","100px", "100px");
 await infoGetter(modal1, "estudiantes");
 
-const [button2, modal2] = dialog("dialog-profesores","Profesores","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+const [button2, modal2] = dialog("dialog-profesores","Profesores","#F3EFE0","#1A659E","sans-serif","35px","100px", "100px");
 await infoGetter(modal2, "profesores");
 
-const [button3, modal3] = dialog("dialog-asignaturas","Asignaturas","#F3EFE0","#1A659E","sans-serif","16px","100px", "100px");
+const [button3, modal3] = dialog("dialog-asignaturas","Asignaturas","#F3EFE0","#1A659E","sans-serif","35px","100px", "100px");
 await infoGetter(modal3, "asignaturas");
 
-const clearBtn = buttonDemoMessage("Limpiar Base de Conocimientos","","#F3EFE0","#ff0000ff","sans-serif","16px","100px", "100px", async() => await clearAction());
+const clearBtn = buttonDemoMessage("Limpiar Base de Conocimientos","","#F3EFE0","#ff0000ff","sans-serif","35px","100px", "100px", async() => await clearAction());
+
+button1.style.display = "block";
+button1.style.margin = "100px auto";
+
+button2.style.display = "block";
+button2.style.margin = "100px auto";
+
+button3.style.display = "block";
+button3.style.margin = "100px auto";
+
+clearBtn.style.display = "block";
+clearBtn.style.margin = "100px auto";
 
 header.appendChild(button1);
 header.appendChild(modal1);

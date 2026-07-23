@@ -19,9 +19,12 @@ sus salidas, favor disculpar.
 document.body.style.padding = 0;
 document.body.style.margin = 0;
 
+const menuLateral = renderMenuLateral();
 
- 
+const menuBotones = await menu();
+menuLateral.appendChild(menuBotones);
+
 printAsAppend(renderMenuSuperior());
-printAsAppend(renderMenuLateral());
+printAsAppend(menuLateral);
 printAsAppend(renderCentroPagina());
 

@@ -59,7 +59,8 @@ const cajaFlexible = (name="div",width="400px",height="100px",position="relative
 
 const boxPosicional = (opt = {"left":0},position="fixed",width="50vw",height="100vh",
     color="#F3EFE0",backgroundColor="#1A659E",fontFamily="sans-serif") => {
-	const div = tagOO("div","",color,backgroundColor,fontFamily);
+	
+        const div = tagOO("div","",color,backgroundColor,fontFamily);
 	div.style.position = position;
 	div.style.top = "0px";
 
@@ -72,7 +73,9 @@ const boxPosicional = (opt = {"left":0},position="fixed",width="50vw",height="10
 	return div;
 }
 const menuSuperior = boxPosicional({"left":0},"fixed","100vw","70px");
+
 const menuLateral = boxPosicional({"right":0},"absolute","18vw","100vh","#F3EFE0","#111827");
+
 const centroPagina = boxPosicional({"left":0},"absolute","82vw","100vh","#111827","#F9FAFB");
 
 
