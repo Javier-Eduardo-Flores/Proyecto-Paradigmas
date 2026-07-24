@@ -16,7 +16,7 @@ $consultaProlog = fn($consulta) =>
         shell_exec(
             sprintf(
                 $consulta,
-                __DIR__."/../../../data-model/db.pl",
+                "/tmp/proyecto-paradigmas-equipo4/runtime/db.pl",
                 __DIR__."/../../Python/prolog_response_manager.py"
             )
         )

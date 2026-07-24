@@ -21,7 +21,7 @@ $dbClearing = fn($consulta) =>
             (
                 $consulta,
                 __DIR__."/../../Python/db_clear_manager.py",
-                __DIR__."/../../../data-model/db.pl"
+                "/tmp/proyecto-paradigmas-equipo4/runtime/db.pl"
             )
         )
     );

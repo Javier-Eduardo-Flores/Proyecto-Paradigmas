@@ -16,7 +16,8 @@ import { menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina } from "./
 import { buttonDemoMessage } from "./dom-events.mjs";
 import { dialog } from "./dom-dialog.mjs";
 
-const init = () =>{
+const init = async () =>{
+    await getData("/assets/api/PHP/runtime_manager.php")
     document.body.style.backgroundColor = ` #F3EFE0`;
     document.body.style.color = ` #1F2937`;
     document.body.style.fontSize = `24px`;
