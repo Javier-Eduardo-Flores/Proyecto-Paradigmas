@@ -76,11 +76,6 @@ profesor('Sonia Raquel Morales Calderon','0501197403891','sonia.calderon@unah.ed
 profesor('Jairo Alexander Sierra Andrade','0801198502903','jairo.sierra@unah.edu.hn').
 profesor('Erika Yaneth Benítez Osorio','0301197104125','erika.benitez@unah.edu.hn').
 
-profesor('Merary Lujan Ayala Lagos','0801198002332','merary.ayala@unah.edu.hn').
-profesor('Carlos Alberto Tenorio Martinez','1007197407510','carlos.tenorio@unah.edu.hn').
-profesor('Pedro Jose Izaguirre Carranza','0801199155144','pedro.izaguirre@unah.edu.hn').
-profesor('Marlon Alexander Murillo Carrillo','0801198704615','marlon.murillo@unah.edu.hn').
-
 
 /*
 asignatura (codigoClase,Nombre de la asignatura,UV)
@@ -124,6 +119,11 @@ asignatura('FS-200','Fisica General II',5).
 asignatura('AGE-120','Administracion',4).
 
 
+asignaturasCarrera(['ISC-101','ISC-102','ISC-103','ISC-204','ISC-211','IE-326','ISC-321',
+'ISC-351','ISC-331','ISC-333','ISC-312','ISC-341','ISC-332','ISC-334','ISC-305','ISC-313',
+'ISC-306','ISC-336','ISC-407','ISC-414','ISC-435','ISC-437','ISC-408','ISC-422','ISC-442',
+'ISC-443','ISC-409','ISC-423','ISC-415','ISC-445','ISC-552','ISC-544','ISC-546','MM-420','FS-200','AGE-120'
+])
 /*
 requisitos (Clase,requisito1,requisito2,requisito3,requisito4).
 */
@@ -516,64 +516,6 @@ clase('MM-420','1501198605678','20201001033',89).
 clase('AGE-120','0801197803415','20201001033',80).
 clase('IE-326','0301197104125','20201001033',67).
 clase('ISC-312','0801197604567','20201001033',90).
-
-%estudiante31
-clase('ISC-101','0801198801452','20231003133',75).
-clase('ISC-102','0501199002341','20231003133',70).
-clase('ISC-103','0601198201890','20231003133',100).
-
-%estudiante32
-clase('ISC-101','0801198801452','20261001001',75).
-clase('ISC-102','0501199002341','20261001001',70).
-
-%estudiante33
-clase('ISC-101','0801198002332','20261001076',90).
-clase('ISC-102','0501199002341','20261001076',70).
-
-%estudiante34
-clase('ISC-101','0801198002332','20261001055',86).
-clase('ISC-102','1007197407510','20261001055',68).
-
-%estudiante35
-clase('ISC-101','0801198002332','20261001133',65).
-
-%estudiante36
-clase('ISC-101','0801198002332','20251002078',96).
-clase('ISC-102','1007197407510','20251002078',98).
-clase('ISC-103','0601198201890','20251002078',86).
-clase('ISC-204','0801199155144','20251002078',84).
-clase('ISC-211','0801199155144','20251002078',81).
-clase('MM-420','1007197407510','20251002078',93).
-
-%estudiante37
-clase('ISC-101','0801198002332','20261002044',79).
-clase('ISC-102','1007197407510','20261002044',75).
-clase('ISC-103','0801199155144','20261002044',83).
-
-%estudiante38
-clase('ISC-101','0801198002332','20251001030',79).
-clase('ISC-102','1007197407510','20251001030',75).
-clase('ISC-103','0801199155144','20251001030',79).
-clase('ISC-204','0801199155144','20251001030',84).
-
-%estudiante39
-estudiante('Gerardo Antonio Dominguez Medina','20241004092','gerardo.dominguez@unah.hn').
-clase('ISC-101','0801198801452','20241004092',70).
-clase('ISC-102','0501199002341','20241004092',90).
-clase('ISC-103','0601198201890','20241004092',76).
-clase('ISC-204','0801197803415','20241004092',80).
-clase('ISC-211','0301197104125','20241004092',91).
-clase('MM-420','1007197407510','20241004092',93).
-
-%estudiante40
-estudiante('Jose Manuel Velazquez Gamez','20241003021','jose.gamez@unah.hn').
-clase('ISC-101','0801198801452','20241003021',70).
-clase('ISC-102','0501199002341','20241003021',90).
-clase('ISC-103','0601198201890','20241003021',76).
-clase('ISC-204','0801197803415','20241003021',80).
-clase('ISC-211','0301197104125','20241003021',91).
-clase('MM-420','1007197407510','20241003021',93).
-
 
 /**
 Reglas en prolog, Recordar cambiarlas a un archivo en servicios
