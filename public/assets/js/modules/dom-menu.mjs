@@ -7,7 +7,7 @@
 import {cajaFlexible} from "./dom-box.mjs"
 import { tag, tagOO } from "./dom-basic-html.mjs";
 import { buttonDemoMessage } from "./dom-events.mjs";
-import { createTabla } from "./dom-tabla.mjs";
+import { createTabla, encabezadoTabla, filaTabla } from "./dom-tabla.mjs";
 import { dialog } from "./dom-dialog.mjs";
 import { getData } from "./fetch.mjs";
 import { box } from "./dom-box.mjs";
@@ -26,10 +26,43 @@ import { tagDinamico } from "./dom-basic-html.mjs";
  */
 
 
+const mostrarSubConsulta = async( parameter,key ) => {
+    const consultas = 
+    { 
+        Cuenta: "/assets/api/PHP/clasesEstudiante.php", 
+        DNI: "/assets/api/PHP/alumnosProfesor.php" 
+    }; 
+    const response = await getData(consultas[key], {[key]: parameter});
+    const modal = document.createElement("dialog");
 
+    const datos = Object.values(response)[0];
+
+    let tabla = tagOO("table","")
+    tabla.appendChild(encabezadoTabla(datos));
+
+    datos.forEach(fila => {
+        tabla.appendChild(filaTabla(fila));
+
+        
+    });
+    
+    modal.appendChild(tabla);
+
+    const close = document.createElement("button");
+    close.textContent = "Cerrar";
+
+    close.onclick = () => {
+        modal.close();
+        modal.remove();
+    };
+    modal.appendChild(close);
+
+    printAsAppend(modal);
+    modal.showModal();
+};
 const infoGetter = async(modal, consulta) => 
     {
-    const tabla = await createTabla(consulta);
+    const tabla = await createTabla(consulta, mostrarSubConsulta);
     modal.appendChild(tabla);
 
     };
@@ -105,6 +138,7 @@ let titulo = tagDinamico("h2",
     });
 
 titulo.innerHTML = "Proyecto Paradigmas de Programacion";
+
 let AcercaDe = tagOO("button","Acerca De","#F3EFE0","#CC8B86","sans-serif","16px","100px","40px");
 AcercaDe.style.position = "absolute";
 AcercaDe.style.right = "12px";

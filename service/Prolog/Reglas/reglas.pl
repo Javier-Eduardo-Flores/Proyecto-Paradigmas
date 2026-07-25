@@ -21,6 +21,6 @@ requisitos_clase(CodigoClase,CodigoRequisito,NombreRequisito,UVRequisito):-
     obtenerRequisito(ListaRequisitos,CodigoRequisito,NombreRequisito,UVRequisito).
   
 
-ClaseXEstudiante(Cuenta,CodigAsignatura,NombreAsignatura,Calificacion):-
-    clase(CodigoClase,_,Cuenta,Calificacion),
-    asignatura(CodigoClase,NombreAsignatura,_).
+clases_Estudiante(Cuenta,CodigoAsignatura,NombreAsignatura,Calificacion):-
+    clase(CodigoAsignatura,_,Cuenta,Calificacion),
+    asignatura(CodigoAsignatura,NombreAsignatura,_).

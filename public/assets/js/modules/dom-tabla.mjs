@@ -10,9 +10,26 @@
 import { tagOO } from "./dom-basic-html.mjs";
 import { getData } from "./fetch.mjs";
 
-const filaTabla = (data) => {
-    let content = Object.values(data).map(item=>`<td style= "border:5px solid black" >${item}</td>`).join("");
-    return tagOO("tr",content,"black","#FFF");
+const filaTabla = (data, campoId, filaOnClick = null) => {
+    let content = Object.values(data).map
+    (
+        item =>
+        `<td style= "border:2px solid black">${item}</td>`
+    )
+    .join("");
+    
+    let fila = tagOO("tr",content,"black","#FFF");
+
+    fila.dataset.id = data[campoId];
+
+    if (filaOnClick){
+    
+        fila.onclick = () =>filaOnClick(data[campoId], campoId);    
+    
+    }
+    
+
+    return fila;
 }
  
 const encabezadoTabla = (data)=> {
@@ -20,12 +37,27 @@ const encabezadoTabla = (data)=> {
     return tagOO("tr",content,"black","#FFF");
 }
 
-const createTabla = async (consulta)=>{
+/**
+ * Funcion encargada de crear los dialogs de las "subconsultas"
+ * (por ejemplo, mostrar las clases cursadas de un alumno, los alumnos de un profesor, etc).
+ * @author carlos.machigua@unah.hn
+ * @date 24/07/26
+ */
+
+const createTabla = async (consulta, filaOnClick = null)=>{
     
-    const endpoints ={
+    const endpoints =
+    {
         estudiantes: "/assets/api/PHP/estudiantes.php",
         profesores: "/assets/api/PHP/profesores.php",
         asignaturas: "/assets/api/PHP/asignaturas.php"
+    };
+
+    const campos = 
+    {
+        estudiantes: "Cuenta",
+        profesores: "DNI",
+        asignaturas: "Codigo"
     };
 
     const respuesta = await getData(endpoints[consulta]);
@@ -37,14 +69,16 @@ const createTabla = async (consulta)=>{
     tabla.appendChild(encabezadoTabla(datos));
     
     datos.forEach(fila => {
-        tabla.appendChild(filaTabla(fila))
+        tabla.appendChild(filaTabla(fila, campos[consulta], filaOnClick))
     });
     
     return tabla;
 }
 
 export {
-    createTabla
+    createTabla,
+    encabezadoTabla,
+    filaTabla
 }
 
 
