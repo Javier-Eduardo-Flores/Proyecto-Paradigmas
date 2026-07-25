@@ -1,6 +1,6 @@
 /**
-Reglas en prolog
-@author flores.javier@unah.hn
+*Reglas en prolog
+*@author flores.javier@unah.hn
 */
 
 %reglas para consultar datos
