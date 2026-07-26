@@ -24,7 +24,8 @@ const filaTabla = (data, campoId, filaOnClick = null) => {
 
     if (filaOnClick){
     
-        fila.onclick = () =>filaOnClick(data[campoId], campoId);    
+        fila.onclick = () =>filaOnClick(data[campoId], campoId, data);
+        fila.style.cursor = "pointer";    
     
     }
     
@@ -50,7 +51,9 @@ const createTabla = async (consulta, filaOnClick = null)=>{
     {
         estudiantes: "/assets/api/PHP/estudiantes.php",
         profesores: "/assets/api/PHP/profesores.php",
-        asignaturas: "/assets/api/PHP/asignaturas.php"
+        asignaturas: "/assets/api/PHP/asignaturas.php",
+        topGlobales: "/assets/api/PHP/mejoresPromedios.php",
+        topAsignaturas: "/assets/api/PHP/cantidadEstudiantesClase.php"
     };
 
     const campos = 
@@ -60,8 +63,27 @@ const createTabla = async (consulta, filaOnClick = null)=>{
         asignaturas: "Codigo"
     };
 
+    const ordenamiento = {
+        asignaturas: "UV",
+        topGlobales: "Promedio",
+        topAsignaturas: "Cantidad"
+    };
+
     const respuesta = await getData(endpoints[consulta]);
     const datos = Object.values(respuesta)[0];
+
+    /**
+     * Ordena las asignaturas de manera descendente segun sus Unidades Valorativas, o alternativamente, segun las Calificaciones
+     * utilizando el método Array.prototype.sort() 
+     * 
+     * Basado en el ejemplo de MDN:
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+     * 
+     */
+    const fieldToSort = ordenamiento[consulta];
+    if (fieldToSort in datos[0] ) {
+        datos.sort((a, b) => Number(b[fieldToSort]) - Number(a[fieldToSort]));
+    } 
     
     let tabla = tagOO("table","");
     let contenido = document.createElement("div");

@@ -22,7 +22,8 @@ $consultaProlog = fn($consulta) =>
             )
         )
     );
-
+    //Ruta para cuando necesito probar el output mediante consola
+    // __DIR__."/../../../data-model/db.pl"
 return[
     "resultadoConsulta" => $consultaProlog
 ];

@@ -16,10 +16,8 @@ header("Content-Type: application/json");
 
 ["resultadoConsulta" => $consultaProlog] = include __DIR__."/../../../../service/PHP/Sub-Consultas/index.php";
 
-$dni = $_GET["DNI"];
 
-
-$consulta = "swipl --quiet -g \"consult('%s'), consult('%s'), (forall(profesor_estudiante('{$dni}',NombreEstudiante,CuentaEstudiante,CorreoEstudiante), format('~w,~w,~w~n', [NombreEstudiante, CuentaEstudiante, CorreoEstudiante])) ; true)\" -t halt  | python3 %s Estudiantes Nombre,Cuenta,Correo";
+$consulta = "swipl --quiet -g \"consult('%s'), consult('%s'), (forall(promedioEstudiantes(NombreEstudiante,Cuenta,Promedio), format('~w,~w,~w~n', [NombreEstudiante, Cuenta, Promedio])) ; true)\" -t halt  | python3 %s Estudiantes Nombre,Cuenta,Promedio";
 
 
 $json = $consultaProlog($consulta);
