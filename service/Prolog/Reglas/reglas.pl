@@ -166,10 +166,9 @@ eliminarClasesPasadas([Head|Tail],Lista,[Head|Resto]):-
 'Obtener Clase'([_|Tail],Clase):-
     'Obtener Clase'(Tail,Clase).
 
-'Generar Secciones'(Clase,Profesor,Aula,Hora):-
+'Generar Secciones'(Clase,Profesor,Aula):-
     'Clases por abrir'(ClasesPorAbrir),
     'Obtener Clase'(ClasesPorAbrir,Clase),
     profesor(Profesor,_,_) ,
-    aula(Aula,_,_) ,
-    hora(Hora).
+    aula(Aula,_,_).
 

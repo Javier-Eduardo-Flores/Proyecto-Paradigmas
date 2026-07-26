@@ -401,7 +401,7 @@ await infoGetter(modal3, "asignaturas");
 
 const clearBtn = buttonDemoMessage("Limpiar Base de Conocimientos","","#F3EFE0","#ff0000ff","sans-serif","35px","100px", "100px", async() => await clearAction());
 
-const availableSections = buttonDemoMessage("Generar Secciones disponibles","","#F3EFE0","#70c45fff","sans-serif","35px","100px", "100px", async() => await clearAction());
+const availableSections = buttonDemoMessage("Generar Secciones disponibles","","#F3EFE0","#70c45fff","sans-serif","35px","100px", "100px", () => goToHorarios());
 
 button1.style.display = "block";
 button1.style.margin = "80px auto";
@@ -450,3 +450,7 @@ const stats = async (consulta) =>{
 export {
     menu,renderMenuSuperior, renderMenuLateral, renderCentroPagina, stats
 }
+
+const goToHorarios = () => {
+    window.location.href = "./horarios.html"
+};
