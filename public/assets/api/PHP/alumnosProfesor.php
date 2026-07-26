@@ -19,7 +19,7 @@ header("Content-Type: application/json");
 $dni = $_GET["DNI"];
 
 
-$consulta = "swipl --quiet -g \"consult('%s'), consult('%s'), (forall(profesor_estudiante('{$dni}',NombreEstudiante,CuentaEstudiante,CorreoEstudiante), format('~w,~w,~w~n', [NombreEstudiante, CuentaEstudiante, CorreoEstudiante])) ; true)\" -t halt  | python3 %s Estudiantes Nombre,Cuenta,Correo";
+$consulta = "swipl --quiet -g \"load_files('%s'), load_files('%s'), (forall(profesor_estudiante('{$dni}',NombreEstudiante,CuentaEstudiante,CorreoEstudiante), format('~w,~w,~w~n', [NombreEstudiante, CuentaEstudiante, CorreoEstudiante])) ; true)\" -t halt  | python3 %s Estudiantes Nombre,Cuenta,Correo";
 
 
 $json = $consultaProlog($consulta);

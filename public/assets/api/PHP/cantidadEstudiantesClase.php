@@ -17,7 +17,7 @@ header("Content-Type: application/json");
 ["resultadoConsulta" => $consultaProlog] = include __DIR__."/../../../../service/PHP/Sub-Consultas/index.php";
 
 
-$consulta = "swipl --quiet -g \"consult('%s'), consult('%s'), (forall('cantidad estudiantes clase'(Clase,Nombre,Cantidad), format('~w,~w,~w~n',[Clase,Nombre,Cantidad])) ; true)\" -t halt | python3 %s Clases Clase,Nombre,Cantidad";
+$consulta = "swipl --quiet -g \"load_files('%s'), load_files('%s'), (forall('cantidad estudiantes clase'(Clase,Nombre,Cantidad), format('~w,~w,~w~n',[Clase,Nombre,Cantidad])) ; true)\" -t halt | python3 %s Clases Clase,Nombre,Cantidad";
 
 $json = $consultaProlog($consulta);
 

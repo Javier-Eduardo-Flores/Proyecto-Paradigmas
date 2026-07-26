@@ -16,6 +16,11 @@ import { menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina, stats } f
 import { buttonDemoMessage } from "./dom-events.mjs";
 import { dialog } from "./dom-dialog.mjs";
 
+/**
+ *
+ * @author carlos.machigua@unah.hn
+ * @date 24/07/26
+ */
 const init = async () =>{
     await getData("/assets/api/PHP/runtime_manager.php")
     document.body.style.backgroundColor = ` #F3EFE0`;

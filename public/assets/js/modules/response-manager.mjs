@@ -2,7 +2,7 @@ import { getData } from "./fetch.mjs";
 import { box } from "./dom-box.mjs";
 /**
  * La idea de este metodo es que reciba la informacion y la imprima en boxes separados
- * @author Machigua
+ * @author carlos.machigua@unah.hn
  */
 const formattedIndividualResponse = async (consulta) => {
 
