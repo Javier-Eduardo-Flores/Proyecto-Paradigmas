@@ -1,12 +1,6 @@
-import { box, printAsAppend } from "./modules/dom.mjs";
+const app = document.getElementById("app");
 
+const titulo = document.createElement("h1");
+titulo.textContent = "Generación de horarios";
 
-import { getData } from "./modules/fetch.mjs";
-
-const cargarSecciones = async () => {
-    const secciones = await getData("/assets/api/PHP/seccionesDisponibles.php");
-
-    console.log(secciones);
-};
-
-cargarSecciones();
+app.appendChild(titulo);
