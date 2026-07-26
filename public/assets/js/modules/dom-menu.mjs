@@ -18,11 +18,10 @@ import { menuSuperior,menuLateral,centroPagina } from "./dom-box.mjs";
 import { tagDinamico } from "./dom-basic-html.mjs";
 
 /**
- * Version modificada del metodo que hizo el ingeniero para traer los datos asincronamente
- *  
- * (es mayormente hecha por Machigua, asi que no se xd)
- * 
- * NO OLVIDAR PONER LA FIRMA DEL INGE
+ * @author jose.inestroza@unah.edu.hn
+ * @author Machigua
+ * @version 0.1.1
+ * @date 25/06/2026
  */
 
 

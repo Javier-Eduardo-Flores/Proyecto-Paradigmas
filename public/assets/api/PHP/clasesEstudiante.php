@@ -19,7 +19,7 @@ header("Content-Type: application/json");
 $cuenta = $_GET["Cuenta"];
 
 
-$consulta = "swipl --quiet -g \"consult('%s'), consult('%s'), (forall(clases_Estudiante('{$cuenta}', Codigo, Nombre, Calificacion), format('~w,~w,~w~n', [Codigo, Nombre, Calificacion])) ; true)\" -t halt  | python3 %s Asignaturas Codigo,Nombre,Calificacion";
+$consulta = "swipl --quiet -g \"load_files('%s'), load_files('%s'), (forall(clases_Estudiante('{$cuenta}', Codigo, Nombre, Calificacion), format('~w,~w,~w~n', [Codigo, Nombre, Calificacion])) ; true)\" -t halt  | python3 %s Asignaturas Codigo,Nombre,Calificacion";
 
 
 $json = $consultaProlog($consulta);

@@ -30,6 +30,13 @@ const tagOO = (name,content=`${placeholder(name)} content ${name}`,
     return obj;
 }
 
+/*Tag Dinamico Visto en Clase
+ * @author jose.inestroza@unah.edu.hn
+ * @version 0.1.1
+ * @date 26/06/29
+ * @since 26/06/25
+ * 
+ */
 const tagDinamico = (name,opt={"color":"#F3EFE0"})=>{
     let element = document.createElement(name);
     Object.assign(element.style,opt);
