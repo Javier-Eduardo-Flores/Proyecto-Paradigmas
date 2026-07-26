@@ -57,7 +57,11 @@ promedioEstudiantes(NombreEstudiante,Cuenta,Promedio):-
     estudiante(NombreEstudiante,Cuenta,_),
 	findall(Nota,clase(_,_,Cuenta,Nota),ListaNotas),
     'promedio lista'(ListaNotas,Promedio).
-    
+
+'cantidad estudiantes clase'(Clase, NombreClase, Cantidad):-
+    asignatura(Clase, NombreClase, _),
+    findall(Cuenta, clase(Clase,_,Cuenta,_), ListaEstudiantes),
+    'tamaño lista'(ListaEstudiantes,Cantidad).   
 
 %Reglas Generacion de horarios
 
@@ -162,12 +166,11 @@ eliminarClasesPasadas([Head|Tail],Lista,[Head|Resto]):-
 'Obtener Clase'([_|Tail],Clase):-
     'Obtener Clase'(Tail,Clase).
 
-'Generar Secciones'(Clase,Profesor,Aula,Hora):-
+'Generar Secciones'(Clase,Profesor,Aula):-
     'Clases por abrir'(ClasesPorAbrir),
     'Obtener Clase'(ClasesPorAbrir,Clase),
     profesor(Profesor,_,_) ,
-    aula(Aula,_,_) ,
-    hora(Hora).
+    aula(Aula,_,_).
 
 'Clases por Abrir info'(Codigo,Nombre,UV):-
     'Clases por abrir'(ListaClases),

@@ -19,10 +19,11 @@ $consultaProlog = fn($consulta) =>
                 "/tmp/proyecto-paradigmas-equipo4/runtime/db.pl",
                 __DIR__."/../../Prolog/Reglas/reglas.pl",
                 __DIR__."/../../Python/prolog_response_manager.py"
-            )
-        )
+                )
+                )
     );
-
+    //Ruta para cuando necesito probar el output mediante consola
+    // __DIR__."/../../../data-model/db.pl"
 return[
     "resultadoConsulta" => $consultaProlog
 ];
