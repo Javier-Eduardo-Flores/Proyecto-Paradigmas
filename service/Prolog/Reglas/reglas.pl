@@ -57,7 +57,11 @@ promedioEstudiantes(NombreEstudiante,Cuenta,Promedio):-
     estudiante(NombreEstudiante,Cuenta,_),
 	findall(Nota,clase(_,_,Cuenta,Nota),ListaNotas),
     'promedio lista'(ListaNotas,Promedio).
-    
+
+'cantidad estudiantes clase'(Clase, NombreClase, Cantidad):-
+    asignatura(Clase, NombreClase, _),
+    findall(Cuenta, clase(Clase,_,Cuenta,_), ListaEstudiantes),
+    'tamaño lista'(ListaEstudiantes,Cantidad).   
 
 %Reglas Generacion de horarios
 

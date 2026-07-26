@@ -12,7 +12,7 @@ import { getData } from "./fetch.mjs";
 import { formattedIndividualResponse } from "./response-manager.mjs";
 import { createTabla } from "./dom-tabla.mjs";
 import { box } from "./dom-box.mjs";
-import { menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina } from "./dom-menu.mjs";
+import { menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina, stats } from "./dom-menu.mjs";
 import { buttonDemoMessage } from "./dom-events.mjs";
 import { dialog } from "./dom-dialog.mjs";
 
@@ -40,7 +40,7 @@ export{
     getData,
     formattedIndividualResponse, 
     createTabla,
-    box,menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina,
+    box,menu,renderMenuSuperior,renderMenuLateral,renderCentroPagina, stats,
     buttonDemoMessage,
     dialog
 };

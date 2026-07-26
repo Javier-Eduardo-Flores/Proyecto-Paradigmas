@@ -19,8 +19,10 @@ const box = (colorFg, colorBg, content= `Placeholder Content`) =>{
     obj.style.border = `solid 2px ${colorFg}`;
     obj.style.borderRadius = "3px";
     obj.style.padding = "12px";
-    obj.style.margin = "90px";
-    obj.style.width = "max-content";
+    obj.style.margin = "5px";
+    obj.style.overflow = "auto"
+    obj.style.width = "auto";
+    obj.style.height = "50vh";
     obj.innerHTML = content;
     
     return obj;
@@ -60,7 +62,7 @@ const cajaFlexible = (name="div",width="400px",height="100px",position="relative
 const boxPosicional = (opt = {"left":0},position="fixed",width="50vw",height="100vh",
     color="#F3EFE0",backgroundColor="#1A659E",fontFamily="sans-serif") => {
 	
-        const div = tagOO("div","",color,backgroundColor,fontFamily);
+    const div = tagOO("div","",color,backgroundColor,fontFamily);
 	div.style.position = position;
 	div.style.top = "0px";
 
@@ -76,7 +78,7 @@ const menuSuperior = boxPosicional({"left":0},"fixed","100vw","70px");
 
 const menuLateral = boxPosicional({"right":0},"absolute","18vw","100vh","#F3EFE0","#111827");
 
-const centroPagina = boxPosicional({"left":0},"absolute","82vw","100vh","#111827","#F9FAFB");
+const centroPagina = boxPosicional({"left":0, "display":"flex","flexWrap": "wrap","top":"70px","gap":"20px"}, "absolute" ,"82vw","100vh","#111827","#F9FAFB");
 
 
 

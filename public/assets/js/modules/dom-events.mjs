@@ -21,6 +21,7 @@ const buttonDemoMessage = (text = "Prueba", message = "", color="",backgroundCol
     element.style.backgroundColor = backgroundColor;
     element.style.fontFamily = fontFamily;
     element.style.fontSize = fontSize;
+    element.style.cursor = "pointer";
     element.onclick = action;
     
     return element;
