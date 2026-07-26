@@ -169,3 +169,8 @@ eliminarClasesPasadas([Head|Tail],Lista,[Head|Resto]):-
     aula(Aula,_,_) ,
     hora(Hora).
 
+'Clases por Abrir info'(Codigo,Nombre,UV):-
+    'Clases por abrir'(ListaClases),
+    asignatura(Codigo,Nombre,UV),
+    member(Codigo,ListaClases).
+
